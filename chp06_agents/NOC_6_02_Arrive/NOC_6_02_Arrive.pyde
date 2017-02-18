@@ -8,8 +8,6 @@
 # See: http://www.red3d.com/cwr/
 from Vehicle import Vehicle
 
-v = None
-
 def setup():
     global v
     

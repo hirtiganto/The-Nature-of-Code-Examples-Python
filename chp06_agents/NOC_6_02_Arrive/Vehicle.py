@@ -45,7 +45,7 @@ class Vehicle:
         d = desired.mag()
         
         # Scale with arbitrary damping within 100 pixels
-        if d > 100:
+        if d < 100:
             m = map(d, 0, 100, 0, self.maxspeed)
             desired.setMag(m)
         else:
