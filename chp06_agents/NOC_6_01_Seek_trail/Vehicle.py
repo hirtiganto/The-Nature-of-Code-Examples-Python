@@ -40,7 +40,7 @@ class Vehicle:
         self.acceleration.add(force)
 
     # A method that calculates a steering force towards a target
-    # steer = desired minus velocity
+    # STEER = DESIRED MINUS VELOCITY
     def seek(self, target):
         # A vector pointing from the position to the target
         desired = PVector.sub(target, self.position)
