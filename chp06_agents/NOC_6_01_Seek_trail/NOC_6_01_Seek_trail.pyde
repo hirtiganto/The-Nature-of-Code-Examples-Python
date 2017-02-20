@@ -11,28 +11,25 @@
 # See: http://www.red3d.com/cwr/
 from Vehicle import Vehicle
 
-v = None
 
 def setup():
     global v
-    
+
     size(800, 200)
     v = Vehicle(width / 2, height / 2)
 
 
 def draw():
-    global v
-    
     background(255)
-    
+
     mouse = PVector(mouseX, mouseY)
-    
+
     # Draw an ellipse at the mouse position
     fill(200)
     stroke(0)
     strokeWeight(2)
     ellipse(mouse.x, mouse.y, 48, 48)
-    
+
     # Call the appropriate steering behaviors for our agents
     v.seek(mouse)
     v.update()
