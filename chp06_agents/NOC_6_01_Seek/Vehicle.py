@@ -9,19 +9,16 @@
 # The "Vehicle" class
 
 class Vehicle:
-    position = None
-    velocity = None
-    acceleration = None
-    r = None
-    maxfroce = None # Maximum steering force
-    maxspeed = None # Maximum speed
-    
     def __init__(self, x, y):
         self.acceleration = PVector(0, 0)
         self.velocity = PVector (0, -2)
         self.position = PVector(x, y)
         self.r = 6
+        
+        # Maximum speed
         self.maxspeed = 4
+        
+        # Maximum steering force
         self.maxforce = 0.1
     
     # Method to update position
@@ -43,7 +40,8 @@ class Vehicle:
     # A method that calculates a steering force towards a target
     # STEER = DESIRED MINUS VELOCITY
     def seek(self, target):
-        desired = PVector.sub(target, self.position)  # A vector pointing from the position to the target
+        # A vector pointing from the position to the target
+        desired = PVector.sub(target, self.position)
         
         # Scale to maximum speed
         desired.setMag(self.maxspeed)
