@@ -9,12 +9,12 @@
 # Implements Craig Reynold's autonomous steering behaviors
 # One vehicle "seeks"
 # See: http://www.red3d.com/cwr/
-from Vehicle import Vehicle
+from vehicle import Vehicle
 
 def setup():
-    global v
-
     size(640, 360)
+    
+    global v
     v = Vehicle(width / 2, height / 2)
 
 
