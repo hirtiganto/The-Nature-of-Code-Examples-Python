@@ -1,3 +1,4 @@
 *.class
 *.pyc
 *.sublime*
+*.DS_Store
